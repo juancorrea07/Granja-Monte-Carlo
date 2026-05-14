@@ -2,6 +2,7 @@ from datetime import datetime
 from granja import Granja
 from cerda import Cerda
 from parto import Parto
+from clima import obtener_clima
 
 granja = Granja()
 
@@ -13,7 +14,8 @@ def menu():
         print("3. Registrar parto")
         print("4. Ver historial")
         print("5. Ver estadísticas")
-        print("6. Salir")
+        print("6. Ver clima")
+        print("7. Salir")
 
         opcion = input("Seleccione una opción: ")
 
@@ -68,6 +70,9 @@ def menu():
             granja.generar_estadisticas()
 
         elif opcion == "6":
+            obtener_clima()
+
+        elif opcion == "7":
             break
 
         else:
