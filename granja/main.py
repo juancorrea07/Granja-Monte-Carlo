@@ -2,7 +2,7 @@ from datetime import datetime
 from granja import Granja
 from cerda import Cerda
 from parto import Parto
-from clima import obtener_clima
+from clima import mostrar_clima_granja
 
 granja = Granja()
 
@@ -70,7 +70,8 @@ def menu():
             granja.generar_estadisticas()
 
         elif opcion == "6":
-            obtener_clima()
+            ciudad = input("Ingrese la ciudad: ").strip().title()
+            mostrar_clima_granja(ciudad)
 
         elif opcion == "7":
             break
